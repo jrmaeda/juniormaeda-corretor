@@ -134,7 +134,32 @@
     }
   </style>
 </head>
-<body>
+<script>
+document.querySelectorAll('.cadastroForm').forEach(form => {
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    data.append("data", new Date().toLocaleString());
+
+    fetch("https://script.google.com/macros/s/AKfycbzLrPo_ZgPm-3id9s-Eao5oVHx1dfPC-n1WSWB3PVXGqRf8xcT0Q80TpIP_GpYk5eNtGA/exec", {
+      method: "POST",
+      body: data
+    })
+    .then(response => response.text())
+    .then(result => {
+      if (result.toLowerCase().includes("ok")) {
+        form.style.display = "none";
+        form.nextElementSibling.style.display = "block";
+      } else {
+        alert("Erro ao enviar. Tente novamente.");
+      }
+    })
+    .catch(() => alert("Erro de conexão. Verifique sua internet."));
+  });
+});
+</script>
+ </body>
+</html>
 
   <header>
     <h1>Junior Maeda Corretor</h1>
