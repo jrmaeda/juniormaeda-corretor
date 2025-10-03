@@ -135,9 +135,11 @@
   </style>
 </head>
 <script>
+<script>
 document.querySelectorAll('.cadastroForm').forEach(form => {
   form.addEventListener('submit', function(e) {
     e.preventDefault();
+
     const data = new FormData(form);
     data.append("data", new Date().toLocaleString());
 
@@ -147,9 +149,10 @@ document.querySelectorAll('.cadastroForm').forEach(form => {
     })
     .then(response => response.text())
     .then(result => {
-      if (result.toLowerCase().includes("ok")) {
+      if (result.trim().toLowerCase() === "ok") {
         form.style.display = "none";
         form.nextElementSibling.style.display = "block";
+        form.scrollIntoView({ behavior: "smooth", block: "center" });
       } else {
         alert("Erro ao enviar. Tente novamente.");
       }
