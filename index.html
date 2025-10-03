@@ -2,7 +2,6 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  
   <title>Junior Maeda Corretor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -95,34 +94,34 @@
       background-color: #005f8e;
     }
 
-.social-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
-}
+    .social-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
 
-.btn-social {
-  width: 180px;
-  text-align: center;
-  padding: 15px 20px;
-  border-radius: 8px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  text-decoration: none;
-  transition: transform 0.2s ease;
-}
+    .btn-social {
+      width: 180px;
+      text-align: center;
+      padding: 15px 20px;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
 
-.btn-social:hover {
-  transform: scale(1.05);
-}
+    .btn-social:hover {
+      transform: scale(1.05);
+    }
 
-.whatsapp  { background-color: #25D366; }
-.instagram { background-color: #FF914D; }  /* tom de pôr do sol */
-.youtube   { background-color: #FF0000; }
-.linkedin  { background-color: #0077B5; }
+    .whatsapp  { background-color: #25D366; }
+    .instagram { background-color: #FF914D; }
+    .youtube   { background-color: #FF0000; }
+    .linkedin  { background-color: #0077B5; }
 
     footer {
       background-color: #ffffff;
@@ -134,35 +133,7 @@
     }
   </style>
 </head>
-<script>
-<script>
-document.querySelectorAll('.cadastroForm').forEach(form => {
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const data = new FormData(form);
-    data.append("data", new Date().toLocaleString());
-
-    fetch("https://script.google.com/macros/s/AKfycbzLrPo_ZgPm-3id9s-Eao5oVHx1dfPC-n1WSWB3PVXGqRf8xcT0Q80TpIP_GpYk5eNtGA/exec", {
-      method: "POST",
-      body: data
-    })
-    .then(response => response.text())
-    .then(result => {
-      if (result.trim().toLowerCase() === "ok") {
-        form.style.display = "none";
-        form.nextElementSibling.style.display = "block";
-        form.scrollIntoView({ behavior: "smooth", block: "center" });
-      } else {
-        alert("Erro ao enviar. Tente novamente.");
-      }
-    })
-    .catch(() => alert("Erro de conexão. Verifique sua internet."));
-  });
-});
-</script>
- </body>
-</html>
+<body>
 
   <header>
     <h1>Junior Maeda Corretor</h1>
@@ -179,63 +150,48 @@ document.querySelectorAll('.cadastroForm').forEach(form => {
     <p>Meu desafio e missão é realizar sonhos através do imóvel ideal, focado na melhor experiência de atendimento, superando os obstáculos da aquisição e fazendo amigos ao longo dessa jornada.</p>
   </section>
 
-<section id="portifolio">
-  <h2>Portfólio de Empreendimentos</h2>
-  <p>Confira os empreendimentos disponíveis para venda:</p>
+  <section id="portifolio">
+    <h2>Portfólio de Empreendimentos</h2>
+    <p>Confira os empreendimentos disponíveis para venda:</p>
 
-<div class="empreendimento">
-  <h3>Landscape – 211m², 3 suítes, 4 vagas</h3>
-  <p>Empreendimento de alto padrão com ampla área privativa, localizado em região nobre. Ideal para famílias que valorizam conforto e sofisticação.</p>
-  <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Landscape_211m²_3_suites_4_vagas.pdf" target="_blank">Baixar PDF</a>
+    <!-- Empreendimentos -->
+    <div class="empreendimento">
+      <h3>Landscape – 211m², 3 suítes, 4 vagas</h3>
+      <p>Empreendimento de alto padrão com ampla área privativa, localizado em região nobre. Ideal para famílias que valorizam conforto e sofisticação.</p>
+      <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Landscape_211m²_3_suites_4_vagas.pdf" target="_blank">Baixar PDF</a>
+    </div>
 
-<div class="empreendimento">
-  <h3>Atmosphere – 147m², 3 suítes, 3 vagas</h3>
-  <p>Ideal para quem valoriza conforto, funcionalidade e localização estratégica. Acabamentos refinados e áreas comuns completas.</p>
-  <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Atmosphere147m²3suites3vagas.pdf" target="_blank">Baixar PDF</a>
-</div>
+    <div class="empreendimento">
+      <h3>Atmosphere – 147m², 3 suítes, 3 vagas</h3>
+      <p>Ideal para quem valoriza conforto, funcionalidade e localização estratégica. Acabamentos refinados e áreas comuns completas.</p>
+      <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Atmosphere147m²3suites3vagas.pdf" target="_blank">Baixar PDF</a>
+    </div>
 
-<div class="empreendimento">
-  <h3>Gaia – 202m², 3 ou 4 suítes, 3 ou 4 vagas</h3>
-  <p>Flexibilidade e sofisticação em um projeto de alto padrão. Ideal para famílias que buscam espaço e exclusividade.</p>
-  <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Gaia202m²3ou4suites3ou4vagas.pdf" target="_blank">Baixar PDF</a>
-</div>
+    <div class="empreendimento">
+      <h3>Gaia – 202m², 3 ou 4 suítes, 3 ou 4 vagas</h3>
+      <p>Flexibilidade e sofisticação em um projeto de alto padrão. Ideal para famílias que buscam espaço e exclusividade.</p>
+      <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Gaia202m²3ou4suites3ou4vagas.pdf" target="_blank">Baixar PDF</a>
+    </div>
 
+    <div class="empreendimento">
+      <h3>Horizon – 245m², 3 ou 4 suítes, 4 vagas</h3>
+      <p>Imponente e exclusivo, com plantas flexíveis e ambientes amplos. Perfeito para quem deseja viver com elegância.</p>
+      <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Horizon245m²3ou4suites4vagas.pdf" target="_blank">Baixar PDF</a>
+    </div>
 
-<div class="empreendimento">
-  <h3>Horizon – 245m², 3 ou 4 suítes, 4 vagas</h3>
-  <p>Imponente e exclusivo, com plantas flexíveis e ambientes amplos. Perfeito para quem deseja viver com elegância.</p>
-  <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Horizon245m²3ou4suites4vagas.pdf" target="_blank">Baixar PDF</a>
-</div>
+    <div class="empreendimento">
+      <h3>Mistral – 83m², 1 suíte, 2 vagas</h3>
+      <p>Design contemporâneo e excelente aproveitamento de espaço. Ideal para casais ou profissionais que desejam morar com estilo.</p>
+      <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Mistral83m²1suite2vagas.pdf" target="_blank">Baixar PDF</a>
+    </div>
 
-<div class="empreendimento">
-  <h3>Mistral – 83m², 1 suíte, 2 vagas</h3>
-  <p>Design contemporâneo e excelente aproveitamento de espaço. Ideal para casais ou profissionais que desejam morar com estilo.</p>
-  <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Mistral83m²1suite2vagas.pdf" target="_blank">Baixar PDF</a>
-</div>
+    <div class="empreendimento">
+      <h3>Noah – 179m², 3 suítes, 3 vagas</h3>
+      <p>Elegante e funcional, com ambientes amplos e iluminados. Um projeto moderno com áreas comuns completas.</p>
+      <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Noah179m²3suites3vagas.pdf" target="_blank">Baixar PDF</a>
+    </div>
 
-
-  <!-- Noah -->
-<div class="empreendimento">
-  <h3>Noah – 179m², 3 suítes, 3 vagas</h3>
-  <p>Elegante e funcional, com ambientes amplos e iluminados. Um projeto moderno com áreas comuns completas.</p>
-  <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Noah179m²3suites3vagas.pdf" target="_blank">Baixar PDF</a>
-</div>
-
-
-  <!-- Seen -->
-<div class="empreendimento">
-  <h3>Seen – 151m², 3 suítes, 3 vagas</h3>
-  <p>Design contemporâneo e localização estratégica. Ideal para quem valoriza conforto, estilo e sofisticação.</p>
-  <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Seen151m²3suites3vagas.pdf" target="_blank">Baixar PDF</a>
-</div>
-
-</section>
-
-<section id="contato">
-  <h2>Contato</h2>
-  <p>📱 (44) 98864-3131</p>
-  <div class="social-buttons">
-    <a class="btn-social whatsapp" href="https://wa.me/5544988643131" target="_blank">WhatsApp</a>
-    <a class="btn-social instagram" href="https://www.instagram.com/juniormaeda_corretor" target="_blank">Instagram</a>
-    <a class="btn-social youtube" href="https://www.youtube.com/results?search_query=Junior+Maeda+Corretor" target="_blank">YouTube</a>
-    <a class="btn-social linkedin" href="https://www.linkedin.com/in/juniormaedacorretor" target="_blank">Linked
+    <div class="empreendimento">
+      <h3>Seen – 151m², 3 suítes, 3 vagas</h3>
+      <p>Design contemporâneo e localização estratégica. Ideal para quem valoriza conforto, estilo e sofisticação.</p>
+      <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Seen151m²3suites3vagas.pdf" target="_blank">Baixar PDF</a
