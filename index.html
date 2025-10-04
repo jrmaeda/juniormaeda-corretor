@@ -94,6 +94,31 @@
       background-color: #005f8e;
     }
 
+    .btn-toggle-form {
+      background-color: #28a745;
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 6px 0 #1e7e34;
+      transition: all 0.2s ease;
+      margin-bottom: 20px;
+    }
+
+    .btn-toggle-form:hover {
+      background-color: #218838;
+      box-shadow: 0 4px 0 #1c7430;
+      transform: translateY(-2px);
+    }
+
+    .btn-toggle-form:active {
+      box-shadow: none;
+      transform: translateY(2px);
+    }
+
     #contato {
       margin-top: 80px;
       padding-top: 40px;
@@ -150,87 +175,82 @@
       text-decoration: underline;
     }
 
-.cadastro-box {
-  background: #fefefe;
-  border-radius: 12px;
-  padding: 25px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  margin-top: 30px;
-  text-align: center;
-}
+    .cadastro-box {
+      background: #fefefe;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      margin-top: 30px;
+      text-align: center;
+    }
 
-.cadastro-box h4 {
-  font-size: 18px;
-  color: #023e8a;
-  margin-bottom: 20px;
-}
+    .cadastroForm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      display: none;
+    }
 
-.cadastroForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+    .cadastroForm input {
+      width: 100%;
+      max-width: 400px;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+      transition: box-shadow 0.3s ease;
+    }
 
-.cadastroForm input {
-  width: 100%;
-  max-width: 400px;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
-  transition: box-shadow 0.3s ease;
-}
+    .cadastroForm input:focus {
+      outline: none;
+      box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+    }
 
-.cadastroForm input:focus {
-  outline: none;
-  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
-}
+    .cadastroForm button {
+      background-color: #28a745;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 5px 0 #1e7e34;
+      transition: all 0.2s ease;
+      margin-top: 10px;
+    }
 
-.cadastroForm button {
-  background-color: #28a745;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 5px 0 #1e7e34;
-  transition: all 0.2s ease;
-  margin-top: 10px;
-}
+    .cadastroForm button:hover {
+      background-color: #218838;
+      box-shadow: 0 3px 0 #1c7430;
+      transform: translateY(-2px);
+    }
 
-.cadastroForm button:hover {
-  background-color: #218838;
-  box-shadow: 0 3px 0 #1c7430;
-  transform: translateY(-2px);
-}
+    .cadastroForm button:active {
+      box-shadow: none;
+      transform: translateY(2px);
+    }
 
-.cadastroForm button:active {
-  box-shadow: none;
-  transform: translateY(2px);
-}
+    .email-contato {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 16px;
+    }
 
-.email-contato {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 16px;
-}
+    .email-contato a {
+      color: #0077b6;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-.email-contato a {
-  color: #0077b6;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.email-contato a:hover {
-  text-decoration: underline;
-}
-  
+    .email-contato a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -252,131 +272,131 @@
   <h2>Portfólio de Empreendimentos</h2>
   <p>Confira os empreendimentos disponíveis para venda:</p>
 
-  <!-- Landscape -->
-  <div class="empreendimento">
-    <h3>Landscape – 211m², 3 suítes, 4 vagas</h3>
-    <p>Empreendimento de alto padrão com ampla área privativa, localizado em região nobre. Ideal para famílias que valorizam conforto e sofisticação.</p>
-    <div class="cadastro-box">
-      <h4>Cadastre-se para acessar o PDF:</h4>
-      <form class="cadastroForm">
-        <input type="text" name="nome" placeholder="Seu nome completo" required>
-        <input type="email" name="email" placeholder="Seu melhor e-mail" required>
-        <input type="tel" name="telefone" placeholder="Seu telefone com DDD" required>
-        <button type="submit">Baixar PDF</button>
-      </form>
-      <div class="downloadArea" style="display:none;">
-        <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Landscape_211m²_3_suites_4_vagas.pdf" target="_blank">Baixar PDF</a>
-      </div>
+<!-- Landscape -->
+<div class="empreendimento">
+  <h3>Landscape – 211m², 3 suítes, 4 vagas</h3>
+  <p>Empreendimento de alto padrão com ampla área privativa, localizado em região nobre. Ideal para famílias que valorizam conforto e sofisticação.</p>
+  <div class="cadastro-box">
+    <button class="btn-toggle-form">📗 Baixar E-book</button>
+    <form class="cadastroForm" style="display:none;">
+      <input type="text" name="nome" placeholder="Seu nome completo" required>
+      <input type="email" name="email" placeholder="Seu melhor e-mail" required>
+      <input type="tel" name="telefone" placeholder="Seu telefone com DDD" required>
+      <button type="submit">Enviar e liberar download</button>
+    </form>
+    <div class="downloadArea" style="display:none;">
+      <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Landscape_211m²_3_suites_4_vagas.pdf" target="_blank">📥 Baixar PDF</a>
     </div>
   </div>
+</div>
 
-  <!-- Atmosphere -->
-  <div class="empreendimento">
-    <h3>Atmosphere – 147m², 3 suítes, 3 vagas</h3>
-    <p>Ideal para quem valoriza conforto, funcionalidade e localização estratégica. Acabamentos refinados e áreas comuns completas.</p>
-    <div class="cadastro-box">
-      <h4>Cadastre-se para acessar o PDF:</h4>
-      <form class="cadastroForm">
-        <input type="text" name="nome" placeholder="Seu nome completo" required>
-        <input type="email" name="email" placeholder="Seu melhor e-mail" required>
-        <input type="tel" name="telefone" placeholder="Seu telefone com DDD" required>
-        <button type="submit">Baixar PDF</button>
-      </form>
-      <div class="downloadArea" style="display:none;">
-        <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Atmosphere147m²3suites3vagas.pdf" target="_blank">Baixar PDF</a>
-      </div>
+<!-- Atmosphere -->
+<div class="empreendimento">
+  <h3>Atmosphere – 147m², 3 suítes, 3 vagas</h3>
+  <p>Ideal para quem valoriza conforto, funcionalidade e localização estratégica. Acabamentos refinados e áreas comuns completas.</p>
+  <div class="cadastro-box">
+    <button class="btn-toggle-form">📗 Baixar E-book</button>
+    <form class="cadastroForm" style="display:none;">
+      <input type="text" name="nome" placeholder="Seu nome completo" required>
+      <input type="email" name="email" placeholder="Seu melhor e-mail" required>
+      <input type="tel" name="telefone" placeholder="Seu telefone com DDD" required>
+      <button type="submit">Enviar e liberar download</button>
+    </form>
+    <div class="downloadArea" style="display:none;">
+      <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Atmosphere147m²3suites3vagas.pdf" target="_blank">📥 Baixar PDF</a>
     </div>
   </div>
+</div>
 
-  <!-- Gaia -->
-  <div class="empreendimento">
-    <h3>Gaia – 202m², 3 ou 4 suítes, 3 ou 4 vagas</h3>
-    <p>Flexibilidade e sofisticação em um projeto de alto padrão. Ideal para famílias que buscam espaço e exclusividade.</p>
-    <div class="cadastro-box">
-      <h4>Cadastre-se para acessar o PDF:</h4>
-      <form class="cadastroForm">
-        <input type="text" name="nome" placeholder="Seu nome completo" required>
-        <input type="email" name="email" placeholder="Seu melhor e-mail" required>
-        <input type="tel" name="telefone" placeholder="Seu telefone com DDD" required>
-        <button type="submit">Baixar PDF</button>
-      </form>
-      <div class="downloadArea" style="display:none;">
-        <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Gaia202m²3ou4suites3ou4vagas.pdf" target="_blank">Baixar PDF</a>
-      </div>
+<!-- Gaia -->
+<div class="empreendimento">
+  <h3>Gaia – 202m², 3 ou 4 suítes, 3 ou 4 vagas</h3>
+  <p>Flexibilidade e sofisticação em um projeto de alto padrão. Ideal para famílias que buscam espaço e exclusividade.</p>
+  <div class="cadastro-box">
+    <button class="btn-toggle-form">📗 Baixar E-book</button>
+    <form class="cadastroForm" style="display:none;">
+      <input type="text" name="nome" placeholder="Seu nome completo" required>
+      <input type="email" name="email" placeholder="Seu melhor e-mail" required>
+      <input type="tel" name="telefone" placeholder="Seu telefone com DDD" required>
+      <button type="submit">Enviar e liberar download</button>
+    </form>
+    <div class="downloadArea" style="display:none;">
+      <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Gaia202m²3ou4suites3ou4vagas.pdf" target="_blank">📥 Baixar PDF</a>
     </div>
   </div>
+</div>
 
-  <!-- Horizon -->
-  <div class="empreendimento">
-    <h3>Horizon – 245m², 3 ou 4 suítes, 4 vagas</h3>
-    <p>Imponente e exclusivo, com plantas flexíveis e ambientes amplos. Perfeito para quem deseja viver com elegância.</p>
-    <div class="cadastro-box">
-      <h4>Cadastre-se para acessar o PDF:</h4>
-      <form class="cadastroForm">
-        <input type="text" name="nome" placeholder="Seu nome completo" required>
-        <input type="email" name="email" placeholder="Seu melhor e-mail" required>
-        <input type="tel" name="telefone" placeholder="Seu telefone com DDD" required>
-        <button type="submit">Baixar PDF</button>
-      </form>
-      <div class="downloadArea" style="display:none;">
-        <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Horizon245m²3ou4suites4vagas.pdf" target="_blank">Baixar PDF</a>
-      </div>
+<!-- Horizon -->
+<div class="empreendimento">
+  <h3>Horizon – 245m², 3 ou 4 suítes, 4 vagas</h3>
+  <p>Imponente e exclusivo, com plantas flexíveis e ambientes amplos. Perfeito para quem deseja viver com elegância.</p>
+  <div class="cadastro-box">
+    <button class="btn-toggle-form">📗 Baixar E-book</button>
+    <form class="cadastroForm" style="display:none;">
+      <input type="text" name="nome" placeholder="Seu nome completo" required>
+      <input type="email" name="email" placeholder="Seu melhor e-mail" required>
+      <input type="tel" name="telefone" placeholder="Seu telefone com DDD" required>
+      <button type="submit">Enviar e liberar download</button>
+    </form>
+    <div class="downloadArea" style="display:none;">
+      <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Horizon245m²3ou4suites4vagas.pdf" target="_blank">📥 Baixar PDF</a>
     </div>
   </div>
+</div>
 
-  <!-- Mistral -->
-  <div class="empreendimento">
-    <h3>Mistral – 83m², 1 suíte, 2 vagas</h3>
-    <p>Design contemporâneo e excelente aproveitamento de espaço. Ideal para casais ou profissionais que desejam morar com estilo.</p>
-    <div class="cadastro-box">
-      <h4>Cadastre-se para acessar o PDF:</h4>
-      <form class="cadastroForm">
-        <input type="text" name="nome" placeholder="Seu nome completo" required>
-        <input type="email" name="email" placeholder="Seu melhor e-mail" required>
-        <input type="tel" name="telefone" placeholder="Seu telefone com DDD" required>
-        <button type="submit">Baixar PDF</button>
-      </form>
-      <div class="downloadArea" style="display:none;">
-        <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Mistral83m²1suite2vagas.pdf" target="_blank">Baixar PDF</a>
-      </div>
+<!-- Mistral -->
+<div class="empreendimento">
+  <h3>Mistral – 83m², 1 suíte, 2 vagas</h3>
+  <p>Design contemporâneo e excelente aproveitamento de espaço. Ideal para casais ou profissionais que desejam morar com estilo.</p>
+  <div class="cadastro-box">
+    <button class="btn-toggle-form">📗 Baixar E-book</button>
+    <form class="cadastroForm" style="display:none;">
+      <input type="text" name="nome" placeholder="Seu nome completo" required>
+      <input type="email" name="email" placeholder="Seu melhor e-mail" required>
+      <input type="tel" name="telefone" placeholder="Seu telefone com DDD" required>
+      <button type="submit">Enviar e liberar download</button>
+    </form>
+    <div class="downloadArea" style="display:none;">
+      <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Mistral83m²1suite2vagas.pdf" target="_blank">📥 Baixar PDF</a>
     </div>
   </div>
+</div>
 
-  <!-- Noah -->
-  <div class="empreendimento">
-    <h3>Noah – 179m², 3 suítes, 3 vagas</h3>
-    <p>Elegante e funcional, com ambientes amplos e iluminados. Um projeto moderno com áreas comuns completas.</p>
-    <div class="cadastro-box">
-      <h4>Cadastre-se para acessar o PDF:</h4>
-      <form class="cadastroForm">
-        <input type="text" name="nome" placeholder="Seu nome completo" required>
-        <input type="email" name="email" placeholder="Seu melhor e-mail" required>
-        <input type="tel" name="telefone" placeholder="Seu telefone com DDD" required>
-        <button type="submit">Baixar PDF</button>
-      </form>
-      <div class="downloadArea" style="display:none;">
-        <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Noah179m²3suites3vagas.pdf" target="_blank">Baixar PDF</a>
-      </div>
+<!-- Noah -->
+<div class="empreendimento">
+  <h3>Noah – 179m², 3 suítes, 3 vagas</h3>
+  <p>Elegante e funcional, com ambientes amplos e iluminados. Um projeto moderno com áreas comuns completas.</p>
+  <div class="cadastro-box">
+    <button class="btn-toggle-form">📗 Baixar E-book</button>
+    <form class="cadastroForm" style="display:none;">
+      <input type="text" name="nome" placeholder="Seu nome completo" required>
+      <input type="email" name="email" placeholder="Seu melhor e-mail" required>
+      <input type="tel" name="telefone" placeholder="Seu telefone com DDD" required>
+      <button type="submit">Enviar e liberar download</button>
+    </form>
+    <div class="downloadArea" style="display:none;">
+      <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Noah179m²3suites3vagas.pdf" target="_blank">📥 Baixar PDF</a>
     </div>
   </div>
+</div>
 
-  <!-- Seen -->
-  <div class="empreendimento">
-    <h3>Seen – 151m², 3 suítes, 3 vagas</h3>
-    <p>Design contemporâneo e localização estratégica. Ideal para quem valoriza conforto, estilo e sofisticação.</p>
-    <div class="cadastro-box">
-      <h4>Cadastre-se para acessar o PDF:</h4>
-      <form class="cadastroForm">
-        <input type="text" name="nome" placeholder="Seu nome completo" required>
-        <input type="email" name="email" placeholder="Seu melhor e-mail" required>
-        <input type="tel" name="telefone" placeholder="Seu telefone com DDD" required>
-        <button type="submit">Baixar PDF</button>
-      </form>
-      <div class="downloadArea" style="display:none;">
-        <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Seen151m²3suites3vagas.pdf" target="_blank">Baixar PDF</a>
-      </div>
+<!-- Seen -->
+<div class="empreendimento">
+  <h3>Seen – 151m², 3 suítes, 3 vagas</h3>
+  <p>Design contemporâneo e localização estratégica. Ideal para quem valoriza conforto, estilo e sofisticação.</p>
+  <div class="cadastro-box">
+    <button class="btn-toggle-form">📗 Baixar E-book</button>
+    <form class="cadastroForm" style="display:none;">
+      <input type="text" name="nome" placeholder="Seu nome completo" required>
+      <input type="email" name="email" placeholder="Seu melhor e-mail" required>
+      <input type="tel" name="telefone" placeholder="Seu telefone com DDD" required>
+      <button type="submit">Enviar e liberar download</button>
+    </form>
+    <div class="downloadArea" style="display:none;">
+      <a class="btn-download" href="https://github.com/jrmaeda/juniormaeda-corretor/raw/main/Seen151m²3suites3vagas.pdf" target="_blank">📥 Baixar PDF</a>
     </div>
   </div>
+</div>
 </section>
 
 
@@ -407,7 +427,15 @@
     <p>Este site tem caráter informativo. Imagens e descrições são ilustrativas e podem sofrer alterações sem aviso prévio.</p>
   </footer>
 
-  <script>
+<script>
+document.querySelectorAll('.btn-toggle-form').forEach(button => {
+  button.addEventListener('click', function() {
+    const form = this.nextElementSibling;
+    form.style.display = 'flex';
+    this.style.display = 'none';
+  });
+});
+
 document.querySelectorAll('.cadastroForm').forEach(form => {
   form.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -430,5 +458,6 @@ document.querySelectorAll('.cadastroForm').forEach(form => {
   });
 });
 </script>
+
 </body>
 </html>
