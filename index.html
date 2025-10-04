@@ -378,5 +378,28 @@
     <p>Este site tem caráter informativo. Imagens e descrições são ilustrativas e podem sofrer alterações sem aviso prévio.</p>
   </footer>
 
+  <script>
+document.querySelectorAll('.cadastroForm').forEach(form => {
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    fetch("https://script.google.com/macros/s/AKfycbzLrPo_ZgPm-3id9s-Eao5oVHx1dfPC-n1WSWB3PVXGqRf8xcT0Q80TpIP_GpYk5eNtGA/exec", {
+      method: "POST",
+      body: data
+    })
+    .then(response => response.text())
+    .then(result => {
+      if (result.trim().toLowerCase() === "ok") {
+        form.style.display = "none";
+        form.nextElementSibling.style.display = "block";
+        form.scrollIntoView({ behavior: "smooth", block: "center" });
+      } else {
+        alert("Erro ao enviar. Tente novamente.");
+      }
+    })
+    .catch(() => alert("Erro de conexão. Verifique sua internet."));
+  });
+});
+</script>
 </body>
 </html>
