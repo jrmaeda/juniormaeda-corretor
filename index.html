@@ -150,54 +150,61 @@
       text-decoration: underline;
     }
 
-    .cadastro-box {
+.cadastro-box {
   background: #fefefe;
   border-radius: 12px;
-  padding: 30px;
+  padding: 25px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   margin-top: 30px;
   text-align: center;
 }
 
 .cadastro-box h4 {
-  font-size: 22px;
+  font-size: 18px;
   color: #023e8a;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+}
+
+.cadastroForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cadastroForm input {
-  width: 90%;
-  max-width: 500px;
-  padding: 16px;
-  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  margin-bottom: 15px;
   border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 17px;
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
   transition: box-shadow 0.3s ease;
 }
 
 .cadastroForm input:focus {
   outline: none;
-  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
 }
 
 .cadastroForm button {
   background-color: #28a745;
   color: white;
-  padding: 14px 28px;
+  padding: 12px 24px;
   border: none;
-  border-radius: 10px;
-  font-size: 18px;
+  border-radius: 8px;
+  font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 6px 0 #1e7e34;
+  box-shadow: 0 5px 0 #1e7e34;
   transition: all 0.2s ease;
+  margin-top: 10px;
 }
 
 .cadastroForm button:hover {
   background-color: #218838;
-  box-shadow: 0 4px 0 #1c7430;
+  box-shadow: 0 3px 0 #1c7430;
   transform: translateY(-2px);
 }
 
